@@ -85,3 +85,22 @@ void menu1()
     retourMenu();
 
 }
+
+
+//procedure menu 2 pour l'afficher
+void menu2()
+{
+    FILE* fichier = NULL;
+    int caractereActuel = 0;
+
+    fichier = fopen("etudiant_data.txt", "r");
+    printf("\n======== MENU 3 =========\n");
+
+    printf("*** liste du fichier ***\n\n");
+
+
+
+    retourMenu();
+
+}
+
