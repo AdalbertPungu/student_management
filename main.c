@@ -205,6 +205,19 @@ void menu2Tuteur()
 int main()
 {
     //creation du menu
+        printf("\n=============================\n");
+    printf("\tMENU PRINCIPAL\n");
+    printf("=============================\n\n");
+
+    int choix;
+
+    printf(":Pour Enregistrer l'etudiant Tapez 1\n");
+    printf(":Pour Enregistrer le tuteur Tapez 2\n");
+    printf(":Pour Afficher les Etudiants Tapez 3\n");
+    printf(":Pour Afficher les Tuteurs Taper 4\n");
+    printf(":Pour quitter Tapez 5\n");
+    printf(":Votre exe n'a pas d'arguments, veuilez saisir\n");
+    //la boucle va continué tantque la condition de choix ne pas respecté
     
     return 0;
 }
