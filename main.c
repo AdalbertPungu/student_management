@@ -50,6 +50,38 @@ void menu1()
         }
     }while(nbreP <= 0);
 
+        printf("\n***Enregistrement***\n");
 
+    if(fichier != NULL)
+    {
+        for(int i = 1; i <= nbreP; i += 1)
+        {
+            printf("\nSaisir les informations des Personnes: %d\n", i);
+
+            printf("\nNom: ");
+            scanf("%s", info.Nom);
+
+            printf("Post_nom: ");
+            scanf("%s", info.Post_nom);
+
+            printf("Prenom: ");
+            scanf("%s", info.Prenom);
+
+            printf("Age: ");
+            scanf("%d", &info.age);
+            
+            fprintf(fichier,"%s ", info.Nom);
+            fprintf(fichier,"%s ", info.Post_nom);
+            fprintf(fichier,"%s ", info.Prenom);
+            fprintf(fichier,"%d\n", info.age);
+
+            printf("\nLa chaine: %s, %s, %s, %d\n", info.Nom, info.Post_nom, info.Prenom, info.age);
+
+        }
+
+        fclose(fichier);
+    }
+
+    retourMenu();
 
 }
