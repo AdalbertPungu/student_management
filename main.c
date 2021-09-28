@@ -21,3 +21,6 @@ struct Etudiants
     int Tel[10];
     //numTuteur
 };
+
+struct Etudiants info;
+
