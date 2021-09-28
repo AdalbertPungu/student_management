@@ -171,3 +171,33 @@ void menu1Tuteur()
 
 }
 
+
+//permet d'affiché les informations du tuteur
+void menu2Tuteur()
+{
+
+    FILE* fichier = NULL;
+    int caractereActuel = 0;
+
+
+    fichier = fopen("parent_data.txt", "r");
+    printf("\n======== MENU 4 =========\n");
+
+    printf("*** liste du fichier ***\n\n");
+
+    if (fichier != NULL)
+    {
+        // Boucle de lecture des caractères un à un
+        do
+        {
+            caractereActuel = fgetc(fichier); // On lit le caractère
+            printf("%c", caractereActuel); // On l'affiche
+        } while (caractereActuel != EOF); // On continue tant que fgetc n'a pas retourné EOF (fin de fichier)
+
+        fclose(fichier);
+    }
+
+    retourMenu();
+
+}
+
