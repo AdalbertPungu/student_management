@@ -114,3 +114,60 @@ void menu2()
 
 }
 
+//permet d'ajouté les informations du tuteur
+void menu1Tuteur()
+{
+    FILE* fichier = NULL;
+    int nbreP;
+
+    //Dans fichier on ajoute le fichier en mode lecture(a) s'il n'existe pas
+    fichier = fopen("parent_data.txt", "a");
+
+    printf("\n======== MENU 1 =========\n");
+
+    do{
+        printf("\nQuel est le nombre des personnes ?: ");
+        scanf("%d", &nbreP);
+        if(nbreP <= 0)
+        {
+            printf("le nombre doit etre superieur a 1\n");
+            continue;
+        }
+        else if(nbreP > 0 && nbreP < 1)
+        {
+            break;
+        }
+    }while(nbreP <= 0);
+
+    printf("\n***Enregistrement***\n");
+
+    if(fichier != NULL)
+    {
+        for(int i = 1; i <= nbreP; i += 1)
+        {
+            printf("\nSaisir les informations des Personnes: %d\n", i);
+
+            printf("Nom Tuteur: ");
+            scanf("%s", parent.nomTuteur);
+
+            printf("Profession: ");
+            scanf("%s", parent.Profession);
+
+            printf("Tel: ");
+            scanf("%s", parent.TelTuteur);
+
+            fprintf(fichier,"%s ", parent.nomTuteur);
+            fprintf(fichier,"%s ", parent.Profession);
+            fprintf(fichier,"%s\n", parent.TelTuteur);
+
+            printf("\nLa chaine: %s, %s, %s\n", parent.nomTuteur, parent.Profession, parent.TelTuteur);
+
+        }
+
+        fclose(fichier);
+    }
+
+    retourMenu();
+
+}
+
