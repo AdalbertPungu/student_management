@@ -205,7 +205,7 @@ void menu2Tuteur()
 int main()
 {
     //creation du menu
-        printf("\n=============================\n");
+    printf("\n=============================\n");
     printf("\tMENU PRINCIPAL\n");
     printf("=============================\n\n");
 
@@ -218,6 +218,32 @@ int main()
     printf(":Pour quitter Tapez 5\n");
     printf(":Votre exe n'a pas d'arguments, veuilez saisir\n");
     //la boucle va continué tantque la condition de choix ne pas respecté
-    
+    do{
+        printf("\nle choix est compris entre 1 & 5\n");
+        printf("==>votre choix de menu: ");
+        scanf("%d", &choix);
+
+    }while(choix < 1 || choix > 5);
+
+    switch(choix)
+    {
+        case 1:
+            menu1();
+            break;
+        case 2:
+            menu1Tuteur();
+            break;
+        case 3:
+            menu2();
+            break;
+        case 4:
+            menu2Tuteur();
+            break;
+        case 5:
+            printf("Vous avez choisi de quitter le programme\n");
+            break;
+
+    }
+
     return 0;
 }
