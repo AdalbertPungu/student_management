@@ -1,2 +1,2 @@
-# student_management
+# student management
 gestion des étudiants

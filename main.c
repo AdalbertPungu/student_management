@@ -1,8 +1,7 @@
 //declaration des bibliothèques
 #include <stdio.h>
 #include <stdlib.h>
-#include "prototypes.h"
-#include "prototypes.c"
+#include "headers/prototypes.c"
 
 //structure tuteurs
 struct Tuteurs
